@@ -1,8 +1,26 @@
 h1{
-  color: rgb(255, 0, 0);
+  color: rgb(20, 0, 87);
   background-color: rgb(255, 255, 255);
+  text-align: center;
+  /* text-decoration-line: underline overline;
+  text-decoration-color: brown;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px; */
+  text-decoration: underline overline brown solid 1px;
+}
+
+/* Code Commentiing -> Shortcut key Cntrl + Backslach */
+
+a{
+  text-decoration-line: none;
 }
 
 body{
   background-color: rgb(255, 255, 255);
+}
+
+label{
+  background-color: black;
+  color: white;
+  text-align: center;
 }
