@@ -7,9 +7,18 @@ h1{
   text-decoration-style: solid;
   text-decoration-thickness: 1px; */
   text-decoration: underline overline brown solid 1px;
+  text-shadow: 5px 5px 5px gray;
 }
 
 /* Code Commentiing -> Shortcut key Cntrl + Backslach */
+
+p{
+  text-transform: capitalize;
+  text-indent: 200px;
+  letter-spacing: 5px;
+  line-height: 2.5;
+  word-spacing: 20px;
+}
 
 a{
   text-decoration-line: none;
@@ -23,4 +32,8 @@ label{
   background-color: black;
   color: white;
   text-align: center;
+}
+
+span{
+  text-transform: uppercase;
 }
