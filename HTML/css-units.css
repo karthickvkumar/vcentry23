@@ -29,3 +29,9 @@ h1{
   width: 50vw;
   background-color: blue;
 }
+
+.percentage{
+  height: 50%;
+  width: 50%;
+  background-color: brown;
+}
