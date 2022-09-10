@@ -2,8 +2,30 @@
   background-color: aquamarine;
 } */
 
-div{
-  height: 100px;
+/* #heading{   ID Selector
+  color: red;
+} */
+
+h1{
+  color: green;
+}
+
+.heading{
+  color: red;
+}
+
+#extraHeading{
+  color: blue;
+}
+
+.absolute{
+  height: 200px;
   width: 500px;
   background-color: aquamarine;
+}
+
+.relative{
+  height: 25vh;
+  width: 50vw;
+  background-color: blue;
 }
