@@ -43,6 +43,12 @@ h1{
   color: brown;
   border-radius: 20px;
   border: 2px solid blueviolet;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 10px;
+  padding-bottom: 25px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .square{
