@@ -35,3 +35,19 @@ h1{
   width: 50%;
   background-color: brown;
 }
+
+.sub-heading{
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  color: brown;
+  border-radius: 20px;
+  border: 2px solid blueviolet;
+}
+
+.square{
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+  border-radius: 100px;
+}
