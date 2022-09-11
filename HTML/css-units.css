@@ -51,9 +51,29 @@ h1{
   margin-right: 60px;
 }
 
-.square{
+.circle{
   width: 200px;
   height: 200px;
   background-color: brown;
   border-radius: 100px;
+}
+
+/* 
+
+CSS display property
+
+display: block -> It will convert a Inline element into Block element 
+
+display: inline -> It will convert a Block element into Inline element 
+
+display: none -> It will hide a element in UI
+
+*/
+
+.square{
+  width: 500px;
+  height: 100px;
+  border: 2px solid;
+  margin-bottom: 10px;
+  overflow: auto;
 }
