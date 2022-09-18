@@ -1,0 +1,16 @@
+.fex-container{
+  display: flex;
+  height: 50vh;
+  border: 3px solid black;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 125px;
+  height: 125px;
+  background-color: brown;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
