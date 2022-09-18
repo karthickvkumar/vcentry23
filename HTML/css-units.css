@@ -6,8 +6,15 @@
   color: red;
 } */
 
+@font-face {
+  font-family: 'water_brushregular';
+  src: url('waterbrush-regular-webfont.woff2') format('woff2')
+}
+
 h1{
-  color: green;
+  color: rgb(19, 0, 128);
+  /* font-family: 'Great Vibes', cursive; */
+  font-family: 'water_brushregular';
 }
 
 .heading{
@@ -76,4 +83,17 @@ display: none -> It will hide a element in UI
   border: 2px solid;
   margin-bottom: 10px;
   overflow: auto;
+}
+
+.text{
+  font-size: 30px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.background{
+  /* background-image: url("./shinchu.jpg"); */
+  background-image: url("https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/carens/MASTHEAD-CAR-LOGO-UNIT_CARENS_UPD.png");
+  background-size: 500px auto; /*width height*/
+  background-repeat: no-repeat;
 }
