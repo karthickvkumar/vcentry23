@@ -4,6 +4,8 @@
   border: 3px solid black;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .box{
@@ -13,4 +15,8 @@
   color: white;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.align{
+  align-self: flex-start;
 }
