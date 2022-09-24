@@ -1,6 +1,11 @@
 body{
   margin: 0px;
 }
+
+/* .flex-colum{
+  flex-direction: column !important;
+} */
+
 .container{
   border: 2px solid red;
   height: 35vh;
@@ -62,4 +67,44 @@ body{
 
 .width-75-percentage{
   width: 75%;
+}
+
+.footer-item{
+  border: 2px solid;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.space-even{
+  justify-content: space-evenly;
+}
+
+.footer-image{
+  border: 2px solid red;
+  height: 60%;
+  box-sizing: border-box;
+}
+
+.footer-content{
+  border: 2px solid red;
+  height: 20%;
+  box-sizing: border-box;
+}
+
+/* .heading-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+} */
+
+.image-fit{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.radius{
+  border-radius: 60px
 }
