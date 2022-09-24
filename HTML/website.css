@@ -1,0 +1,17 @@
+body{
+  margin: 0px;
+}
+.container{
+  border: 2px solid red;
+  height: 35vh;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.medium-container{
+  border: 2px solid red;
+  height: 24vh;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+}
