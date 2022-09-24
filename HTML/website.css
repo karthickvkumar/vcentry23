@@ -6,6 +6,8 @@ body{
   height: 35vh;
   box-sizing: border-box;
   margin: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 .medium-container{
@@ -14,4 +16,50 @@ body{
   box-sizing: border-box;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.heading-image{
+  border: 2px solid;
+  height: 100%;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.heading-section{
+  border: 2px solid;
+  height: 100%;
+  width: 75%;
+  box-sizing: border-box
+}
+
+.heading-title{
+  border: 2px solid blue;
+  height: 40%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.heading-content{
+  border: 2px solid blue;
+  height: 60%;
+  box-sizing: border-box;
+}
+
+.heading-item{
+  border: 2px solid red;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.width-10-percentage{
+  width: 10%;
+}
+
+.width-15-percentage{
+  width: 15%;
+}
+
+.width-75-percentage{
+  width: 75%;
 }
