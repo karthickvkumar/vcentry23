@@ -108,3 +108,98 @@ body{
 .radius{
   border-radius: 60px
 }
+
+@media only screen and (max-width: 480px) {
+  .heading-image{
+    width: 50%;
+  }
+
+  .heading-section{
+    width: 50%;
+  }
+
+  .heading-title{
+    height: 60%;
+    flex-wrap: wrap;
+  }
+
+  .heading-content{
+    height: 40%;
+  }
+
+  .flex-colum{
+    flex-direction: column !important;
+    height: auto;
+  }
+
+  .space-even{
+    justify-content: flex-start;
+    align-items: center;
+  }
+ 
+  .footer-item{
+    width: 80%;
+    height: 25vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .title-image{
+    order: 1;
+    width: 40%;
+    height: 50%;
+  }
+
+  .title-text{
+    order: 3;
+    width: 100%;
+    height: 50%;
+  }
+
+  .title-date{
+    order: 2;
+    width: 60%;
+    height: 50%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .heading-image{
+    width: 45%;
+  }
+
+  .heading-section {
+    width: 55%;
+  }
+  
+  .title-image{
+    width: 30%;
+  }
+
+  .title-text{
+    width: 50%;
+  }
+
+  .title-date{
+    width: 20%;
+  }
+
+  .flex-colum{
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .space-even{
+    justify-content: space-between;
+  }
+
+  .footer-item{
+    width: 45%;
+    height: 25vh;
+    margin: 10px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+  
+}

@@ -1,0 +1,29 @@
+body{
+  background-color: aquamarine;
+}
+
+.heading{
+  color: white;
+}
+
+@media only screen and (min-width : 0px) and (max-width : 480px) {
+  body{
+    background-color: black;
+  }
+  
+  .heading{
+    color: yellow;
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (min-width : 481px) and (max-width : 768px) {
+  body{
+    background-color: rebeccapurple;
+  }
+  
+  .heading{
+    color: red;
+    text-decoration: overline;
+  }
+}
