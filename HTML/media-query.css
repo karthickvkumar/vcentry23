@@ -6,6 +6,15 @@ body{
   color: white;
 }
 
+.custom-button{
+  color: black !important;
+}
+
+/* .zoom-icon{
+  transform: scale(3);
+} */
+
+
 @media only screen and (min-width : 0px) and (max-width : 480px) {
   body{
     background-color: black;
