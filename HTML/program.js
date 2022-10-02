@@ -50,3 +50,24 @@ var student_information = {
 };
 
 console.log(student_information);
+
+// Object -> 4 operation = read value, insert new value, edit exisiting value, delete existing value
+
+// To Read a Value -> object_variable_name.key;
+
+console.log(student_information.first_name);
+console.log(student_information.roll_number);
+
+// To Insert a new Value -> object_variable_name.newKey = value;
+
+student_information.blood_group = "A +ve";
+student_information.location = "chennai";
+
+// To Edit/Updated an exisiting value -> object_variable_name.existing_key = new_value;
+
+student_information.first_name = "karthick";
+student_information.last_name = "kumar";
+
+// To delete a existing Record -> delete object_variable_name.key
+
+delete student_information.future_value;
