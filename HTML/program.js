@@ -105,3 +105,21 @@ var student_list = [
 console.log(list_of_mark);
 console.log(name_list);
 console.log(student_list);
+
+// Function -> Block of Code 
+
+// Syntax for Creating a Function (Function Definition)
+
+// function function_name(){
+//   coding
+// }
+
+// function_name -> It should be a Proper text value -> a-z, A-Z, 0-9, $, _
+
+function welcome_message(){
+  var message = "Hello Everyone! Good Day";
+  alert(message);
+}
+
+// Syntax for Executing/Running the Function (Function Invocation)
+// function_name();
