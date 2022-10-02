@@ -23,3 +23,30 @@ console.log(future_value);
 
 roll_number = 100;
 console.log(roll_number);
+
+var first_name = "mr.abc";
+var last_name = "cde";
+var roll_no = 101;
+var age = 24;
+
+// Object -> It is collection of Key and Values
+
+// syntax - Create an Object
+
+// var variable_name = {
+//   key1 : value,
+//   key2 : value
+// }
+
+// key -> Similar to variable_name -> It should contains a-z, A-Z, 0-9, _, $
+// value -> Number, String, Boolean, Object, Array, Function
+
+var student_information = {
+  first_name: "mr.abc",
+  last_name: "cde",
+  roll_number: 101,
+  age: 24,
+  future_value: undefined,
+};
+
+console.log(student_information);
