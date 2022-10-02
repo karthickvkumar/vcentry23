@@ -41,6 +41,8 @@ var age = 24;
 // key -> Similar to variable_name -> It should contains a-z, A-Z, 0-9, _, $
 // value -> Number, String, Boolean, Object, Array, Function
 
+//Group of property
+
 var student_information = {
   first_name: "mr.abc",
   last_name: "cde",
@@ -71,3 +73,35 @@ student_information.last_name = "kumar";
 // To delete a existing Record -> delete object_variable_name.key
 
 delete student_information.future_value;
+
+// Array -> It is a collection of List data with similar data type.
+
+// Syntax of creating an Array
+// var variable_name = [];  empty array
+
+// var variable_name = [value1, value2, .. , valueN ];
+
+// value -> Number, String, Boolean, Object, Array, Function
+
+var list_of_mark = [70, 84, 75, 65, 42]; 
+
+var name_list = ["william", "peter", "john", "hendry"];
+
+var student_list = [ 
+  {
+    first_name: "william",
+    age: 24
+  },
+  {
+    first_name: "peter",
+    age: 22
+  },
+  {
+    first_name: "hendry",
+    age: 23
+  }
+];
+
+console.log(list_of_mark);
+console.log(name_list);
+console.log(student_list);
