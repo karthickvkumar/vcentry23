@@ -123,3 +123,82 @@ function welcome_message(){
 
 // Syntax for Executing/Running the Function (Function Invocation)
 // function_name();
+
+/*Type - 1
+function function_name(){
+
+}
+
+Type -2 
+var function_name = function(){
+
+}
+
+Type -3
+Annonymous Function (Callback function)
+
+function(){
+ 
+}
+
+Type -4
+Arrow Function (ES6 or ES2015)
+
+const function_name = () => {
+
+}
+
+Type -5
+Annonymous Function (Callback function) - (ES6 or ES2015)
+
+() => {
+
+}
+
+Type -6
+IIFE (Immediately Invoked Function Expression)
+
+(function(){
+
+})();
+
+(ES6 or ES2015)
+(() => {
+
+})();
+*/
+
+// Operation in Array -> 4 Operation = Insert a new value, Read the Value, Edit the exiting value, Delete the value
+
+// To Read value from Array
+// array_variable_name[index]
+
+console.log(student_list[1]);
+
+// Insert a new value into Array
+
+// push() - Insert a new value at the end of array record
+// array_variable_name.push(value_1, value_2, ... , value_n);
+
+student_list.push({name : "karthick", age: 27});
+
+// unshift() -> Insert a new value at the start of array record
+// array_variable_name.unshift(value_1, value_2, ... , value_n);
+student_list.unshift({name : "zyan", age: 22});
+
+// To edit a existing value from Array
+// array_variable_name[index] = value;
+
+student_list[3] = {first_name : "Jordan", age : 28};
+
+// To delete an value from Array
+
+// pop() -> Remove a value from last of the Array
+// array_variable_name.pop();
+
+// shift() -> Remove a value from the Start of the Array
+// array_variable_name.shift();
+
+// splice() -> Remove a value from specific index of the Array
+// array_variable_name.splice(index, deleteCount);
+student_list.splice(2, 1);
