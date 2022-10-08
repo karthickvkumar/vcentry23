@@ -202,3 +202,53 @@ student_list[3] = {first_name : "Jordan", age : 28};
 // splice() -> Remove a value from specific index of the Array
 // array_variable_name.splice(index, deleteCount);
 student_list.splice(2, 1);
+
+// Operators
+// 1. Arithmetic Operator  +, -, *, /, %, ++, --
+// 2. Assignment Operator  =
+// 3. Comparision Operator  <, <=, >, >=, ==, ===, !=, !== 
+// 4. Logical Operator &&, ||, !
+
+// && - AND
+// true && true -> true
+// true && false -> false
+// false && true -> false
+// false && false -> false
+
+// || - OR
+// true || true -> true
+// false || true -> true
+// true || false -> true
+// false || false -> false
+
+// ! - NOT
+// ! true -> false
+// ! false -> true
+
+// Syntax - if else conditon
+/*
+  if(conditon) {
+    // code block will execute if the condition is Truthy.
+  }
+  else{
+    // code block will execute if the condition is Falsy.
+  }
+*/
+
+/*
+Problem: To find whether a person is eligible for Vote in India 
+Problem Statement
+1. We need to provide age(Number - Data type) as input for a program 
+2. If the given age is greater than or equal to 18 -> Output - The user is eligible for Vote
+3. If the given age is less then 18 -> Output - The user is not eligible for vote
+*/
+
+function check_voting_status(){
+  var age = prompt("Enter a user Age");
+  if(age >= 18){
+    alert("The user is eligible for Vote");
+  }
+  else{
+    alert("The user is not eligible for vote");
+  }
+}
