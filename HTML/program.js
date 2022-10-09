@@ -289,3 +289,96 @@ function check_person_category(){
     alert("The person is Super Citizen");
   }
 }
+
+/*
+Syntax - for (loop)
+for(initialization;  condition; increment/decrement){ 
+  //code block
+}
+*/
+
+for(var count = 1; count <= 10; count++){
+  console.log("Loop is running on count", count);
+}
+
+/*
+Find even number for given N number of limit.
+1. Get number (Nth number limit)
+2. Logic for finding even number -> Number % 2 === 0
+3. Repeat this logic till 0 to Nth number
+*/
+
+function check_even_numbers(){
+  var last_number = prompt("Enter the last number");
+  for(var count = 0; count <= last_number; count++){
+    if(count % 2 === 0){
+      console.log(count, "is a Even Number");
+    }
+  }
+}
+
+/*Syntax - While (loop) - Entry level check
+while(condition){
+ // loop code block
+}
+*/
+var count = 1;
+while(count <= 5){
+  console.log("The count is", count);
+  count++;
+}
+
+/*
+Syntax - do While (loop) - Exit Level Check
+do{
+ // code block      
+}while(condition)
+*/
+var count = 6;
+do{
+    console.log("The count is", count);
+    count++;
+}while(count <= 5);
+
+/*Syntax - Switch Case
+switch(expression){
+  case value :
+    // code block
+    break;
+  case value :
+    // code block
+    break;
+  default:
+    //code block
+}
+*/
+
+function find_weekday(){
+  var value = prompt("Please enter any number 0 to 6");
+  var day = parseInt(value);
+  switch(day){
+    case 0:
+      alert("Sunday");
+      break;
+    case 1:
+      alert("Monday");
+      break;
+    case 2:
+      alert("Tuesday");
+      break;
+    case 3:
+      alert("Wednesday");
+      break;
+    case 4:
+      alert("Thursday");
+      break;
+    case 5:
+      alert("Friday");
+      break;
+    case 6:
+      alert("Saturday");
+      break;
+    default:
+      alert("Out of Range");
+  }
+}
