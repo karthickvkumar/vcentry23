@@ -252,3 +252,40 @@ function check_voting_status(){
     alert("The user is not eligible for vote");
   }
 }
+
+//Syntax - Multipe if else conditon
+/*
+  if(conditon) {
+    // code block will execute if the condition is Truthy.
+  }
+  else if(condition){
+   // code block will execute if the condition is Truthy
+  }
+  else{
+    // code block will execute if the condition is Falsy.
+  }
+*/
+
+/*
+Problem: To find whether a person age belong to which caterogy
+Problem Statement
+1. We need to provide age(Number - Data type) as input for a program 
+2. To idenfity -> less then 18 -> The person is Minor
+3. To idenfity -> greater then or equal to 18 and less than 60 -> The person is Major
+4. To idenfity -> greater then or equal to 60 -> The person is Super Citizen
+*/
+
+function check_person_category(){
+  var age = prompt("Please enter an user age");
+  var minium_age = 18;
+  var maximium_age = 60;
+  if(age < minium_age){
+    alert("The person is Minor");
+  }
+  else if(age >= minium_age && age < maximium_age ){
+    alert("The person is Major");
+  }
+  else{
+    alert("The person is Super Citizen");
+  }
+}
