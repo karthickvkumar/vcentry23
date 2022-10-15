@@ -354,32 +354,38 @@ switch(expression){
 */
 
 function find_weekday(){
-  var value = prompt("Please enter any number 0 to 6");
-  var day = parseInt(value);
-  switch(day){
-    case 0:
-      alert("Sunday");
-      break;
-    case 1:
-      alert("Monday");
-      break;
-    case 2:
-      alert("Tuesday");
-      break;
-    case 3:
-      alert("Wednesday");
-      break;
-    case 4:
-      alert("Thursday");
-      break;
-    case 5:
-      alert("Friday");
-      break;
-    case 6:
-      alert("Saturday");
-      break;
-    default:
-      alert("Out of Range");
+  try{
+    var value = prompt("Please enter any number 0 to 6");
+    var day = parseint(value);
+    switch(day){
+      case 0:
+        alert("Sunday");
+        break;
+      case 1:
+        alert("Monday");
+        break;
+      case 2:
+        alert("Tuesday");
+        break;
+      case 3:
+        alert("Wednesday");
+        break;
+      case 4:
+        alert("Thursday");
+        break;
+      case 5:
+        alert("Friday");
+        break;
+      case 6:
+        alert("Saturday");
+        break;
+      default:
+        alert("Out of Range");
+    }
+  }
+  catch(error){
+    console.log(error);
+    alert("Something went wrong,pls contact admin!");
   }
 }
 
@@ -481,3 +487,20 @@ function contest_alert(){
 (function(){
   contest_alert();
 })();
+
+// setInterval -> It is used to run a code on the given time period
+/*
+syntax
+setInterval( function(){
+ code changes 
+}, time_millisecond );
+*/
+
+var timerId = setInterval(function(){
+  console.log("Hi there, welcome!")
+}, 3000);
+
+// clearInterval -> It will stop the time interval
+function stopSetInterval(){
+  clearInterval(timerId);
+}
