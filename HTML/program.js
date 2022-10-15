@@ -382,3 +382,50 @@ function find_weekday(){
       alert("Out of Range");
   }
 }
+
+
+function display(){
+  // Local Scope - Defining a Variable inside a Function 
+  // Accessibilty - It can be used With in the Function
+  var student_name = "Hendry Willam";
+  console.log(student_name);
+
+  // Global Scope - Defining a variable Outside a Function 
+  // Accessibility - It can be used Inside any Funtion
+  console.log(user_email_id);
+
+  // Automatic Global Scope - Defining a variable declaration outside a funciton, but assgning value inside a function
+  // Accessibility - It can be used Inside any Funtion
+  future_value = "Hello Everyone!";
+  console.log(future_value);
+}
+
+function print_message(){
+  // console.log(student_name);
+  
+  console.log(user_email_id);
+
+  console.log(future_value);
+}
+
+// Local Storage (permanent) -> Set a new value, Read a value, edit value, Delete particular value
+// max size - 10 to 13 mb
+
+// syntax -> Set a new value
+// localStorage.setItem("key", "value")
+// key -> Similar to variable_name -> It should contains a-z, A-Z, 0-9, _, $
+// value -> Number, String, Boolean
+
+localStorage.setItem("username", "mr.abcdef");
+
+// syntax -> Read a value
+// localStorage.getItem("key");
+var stored_username = localStorage.getItem("username");
+console.log(stored_username);
+
+// syntax - Remove a particular value
+// localStorage.removeItem(key);
+localStorage.removeItem("username");
+
+//syntax - To clear all values
+localStorage.clear();
