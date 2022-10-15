@@ -429,3 +429,55 @@ localStorage.removeItem("username");
 
 //syntax - To clear all values
 localStorage.clear();
+
+var contact_detail = {
+  door_number: 147,
+  street_name: "xyz street",
+  area: "zyx area",
+  pin_code: 6457855
+}
+
+var string_contact_detail = JSON.stringify(contact_detail);
+localStorage.setItem("contact_detail", string_contact_detail);
+
+var string_output = localStorage.getItem("contact_detail");
+var actual_contact = JSON.parse(string_output);
+
+// Session Storage (Temporary) -> Set a new value, Read a value, Delete particular value
+
+// syntax -> Set a new value
+// sessionStorage.setItem("key", "value")
+
+sessionStorage.setItem("username", "Karthick@gmail.com");
+
+// syntax -> Read a value
+// sessionStorage.getItem("key");
+sessionStorage.getItem("username");
+
+//syntax - Remove a particular value
+//sessionStorage.removeItem(key);
+sessionStorage.removeItem("username");
+
+//syntax - To clear all values
+sessionStorage.clear();
+
+// Timers
+/*
+setTimeout - Its used to delay the code excution
+
+setTimeout( function(){
+  code block
+} , time_millisecond);
+
+1000 ms -> 1 second
+*/
+
+function contest_alert(){
+  setTimeout(function(){
+    alert("Win a excting oppurtinity to grab this prize!")
+  }, 5000);
+}
+
+(function(){
+  contest_alert();
+})();
