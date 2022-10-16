@@ -504,3 +504,46 @@ var timerId = setInterval(function(){
 function stopSetInterval(){
   clearInterval(timerId);
 }
+
+// Function - block of code (directly written in JS file, use function keyword)
+// Method - Same like function (defined insisde a Class, doesn't use function keyword)
+
+/*
+syntax
+class ClassName{
+  methodName(){
+
+  }
+}
+
+var className = new ClassName();
+className.methodName();
+*/
+
+/*
+Naming Convension
+1. Pascel Case - KarthickKumar (creating classname, component name)
+2. Camel Case - karthickKumar (creating function, method and variable name)
+3. Snake Case - karthick_kumar (creating function, method and variable name)
+4. Kebab Case - karthick-kumar (creating css - class, id)
+*/
+
+class Authentication{
+  loginPage(){
+    alert("This is a login page");
+  }
+
+  registerPage(){
+    alert("This is a register page");
+  }
+}
+
+var auth = new Authentication();
+auth.loginPage();
+
+class HomePage extends Authentication{
+
+}
+
+var home = new HomePage();
+home.registerPage();
