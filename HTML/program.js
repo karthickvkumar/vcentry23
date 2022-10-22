@@ -480,7 +480,7 @@ setTimeout( function(){
 
 function contest_alert(){
   setTimeout(function(){
-    alert("Win a excting oppurtinity to grab this prize!")
+    // alert("Win a excting oppurtinity to grab this prize!")
   }, 5000);
 }
 
@@ -539,11 +539,30 @@ class Authentication{
 }
 
 var auth = new Authentication();
-auth.loginPage();
+// auth.loginPage();
 
 class HomePage extends Authentication{
 
 }
 
 var home = new HomePage();
-home.registerPage();
+// home.registerPage();
+
+//ES5
+// var variableName = Value; 
+
+// function functionName(){
+//   coding
+// }
+
+// functionName();
+
+//ES6
+// let variableName = Value; (block level / block scope)
+// const variableName = Value; (constant variable)
+
+// const functionName = () => {
+//   coding
+// }
+
+// functionName();
