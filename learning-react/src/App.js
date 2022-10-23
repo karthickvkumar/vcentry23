@@ -1,5 +1,5 @@
 import SimpleFormSubmition from "./components/simple-form";
-import './App.css';
+import "./styles/ui-styles.css"
 
 function App() {
   return (

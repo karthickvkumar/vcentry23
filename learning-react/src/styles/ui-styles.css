@@ -1,0 +1,9 @@
+.lable{
+  display: inline-block;
+  width: 175px;
+}
+
+.space{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
