@@ -11,3 +11,32 @@
 .password-icon{
   width: 35px;
 }
+
+.container{
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.header{
+  height: 10%;
+  border: 3px solid red;
+  box-sizing: border-box;
+}
+
+.main-content{
+  height: 90%;
+  border: 3px solid red;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar{
+  width: 20%;
+  border: 3px solid blue;
+}
+
+.content{
+  width: 80%;
+  border: 3px solid blueviolet;
+}
