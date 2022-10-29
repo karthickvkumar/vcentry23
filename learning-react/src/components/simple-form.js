@@ -13,6 +13,10 @@ const SimpleFormSubmition = () => {
     username : "",
     password : ""
   });
+
+  let [inlineCondtion, setInlineCondition] = useState(true);
+
+  let [ifElseCondition, setIfElseCondition] = useState(false);
   
   const onSubmitForm = () => {
     console.log(loginForm)
@@ -21,6 +25,15 @@ const SimpleFormSubmition = () => {
   const onHandleInput = (event) => {
     // console.log(event.target.value, event.target.id);
     setLoginForm({...loginForm, [event.target.id] : event.target.value });
+  }
+
+  const handleConditionRendering = (condition) => {
+    setInlineCondition(condition);
+  }
+
+  const handleIfElseRendering = () => {
+    let condtion = !ifElseCondition;
+    setIfElseCondition(condtion);
   }
 
   return(
@@ -36,9 +49,40 @@ const SimpleFormSubmition = () => {
       <div className="space">
         <label className="lable">Enter your Password</label>
         <input type="password" placeholder="Please enter password" onChange={onHandleInput} id="password"/>
+        
+        <img src={require("../images/open-eye.png")} alt="open eye" className="password-icon"/>
+
+        <img src={require("../images/close-eye.png")} alt="close eye" className="password-icon"/>
+
+    
       </div>
       <div className="space">
         <button onClick={() => onSubmitForm()}>Submit Form</button>
+      </div>
+      <div>
+        <h2>Conditional Rendering</h2>
+        <button onClick={() => handleConditionRendering(true)}>Show message</button>
+        <button onClick={() => handleConditionRendering(false)}>Hide message</button>
+
+        { inlineCondtion && <div>
+                    <h1>This is a Inline If Conditional</h1>
+                    <h1>I will be show & hide based on a Condition</h1>
+                  </div>  
+        }
+
+      </div>
+      <div>
+        <h1>Inline If-Else Condition</h1>
+        
+        <button onClick={() => handleIfElseRendering()}>Switch ON/OFF</button>
+
+        { ifElseCondition ? <img src="https://cdn.mos.cms.futurecdn.net/HaPnm6P7TZhPQGGUxtDjAg-1200-80.jpg" style={{"width" : "100px"}}/>
+          :
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Gluehlampe_01_KMJ.png/640px-Gluehlampe_01_KMJ.png" style={{"width" : "100px"}}/>
+        }
+        
+
+        
       </div>
     </div>
   )
