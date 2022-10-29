@@ -81,12 +81,11 @@ const SimpleFormSubmition = () => {
         
         <button onClick={() => handleIfElseRendering()}>Switch {ifElseCondition ? "ON" : "OFF"}</button>
 
-        { ifElseCondition ? <img src="https://cdn.mos.cms.futurecdn.net/HaPnm6P7TZhPQGGUxtDjAg-1200-80.jpg" style={{"width" : "100px"}}/>
+        { ifElseCondition ? <img src="https://cdn.mos.cms.futurecdn.net/HaPnm6P7TZhPQGGUxtDjAg-1200-80.jpg" style={{"width" : "100px"}} alt="bulb ON"/>
           :
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Gluehlampe_01_KMJ.png/640px-Gluehlampe_01_KMJ.png" style={{"width" : "100px"}}/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Gluehlampe_01_KMJ.png/640px-Gluehlampe_01_KMJ.png" style={{"width" : "100px"}} alt="bulb OFF"/>
         }
-        
-
+      
         
       </div>
     </div>
