@@ -17,6 +17,8 @@ const SimpleFormSubmition = () => {
   let [inlineCondtion, setInlineCondition] = useState(true);
 
   let [ifElseCondition, setIfElseCondition] = useState(false);
+
+  let [passwordVisiblity, setPasswordVisiblity] = useState(false);
   
   const onSubmitForm = () => {
     console.log(loginForm)
@@ -36,6 +38,10 @@ const SimpleFormSubmition = () => {
     setIfElseCondition(condtion);
   }
 
+  const handlePasswordVisiblity = (condition) => {
+    setPasswordVisiblity(condition);
+  }
+
   return(
     <div>
       <h1>{message}</h1>
@@ -48,13 +54,12 @@ const SimpleFormSubmition = () => {
       </div>
       <div className="space">
         <label className="lable">Enter your Password</label>
-        <input type="password" placeholder="Please enter password" onChange={onHandleInput} id="password"/>
+        <input type={passwordVisiblity ?  "text" : "password"} placeholder="Please enter password" onChange={onHandleInput} id="password"/>
         
-        <img src={require("../images/open-eye.png")} alt="open eye" className="password-icon"/>
+        {passwordVisiblity ? 
+        <img src={require("../images/open-eye.png")} alt="open eye" className="password-icon" onClick={() => handlePasswordVisiblity(false)}/> : 
+        <img src={require("../images/close-eye.png")} alt="close eye" className="password-icon" onClick={() => handlePasswordVisiblity(true)}/>}
 
-        <img src={require("../images/close-eye.png")} alt="close eye" className="password-icon"/>
-
-    
       </div>
       <div className="space">
         <button onClick={() => onSubmitForm()}>Submit Form</button>
@@ -74,7 +79,7 @@ const SimpleFormSubmition = () => {
       <div>
         <h1>Inline If-Else Condition</h1>
         
-        <button onClick={() => handleIfElseRendering()}>Switch ON/OFF</button>
+        <button onClick={() => handleIfElseRendering()}>Switch {ifElseCondition ? "ON" : "OFF"}</button>
 
         { ifElseCondition ? <img src="https://cdn.mos.cms.futurecdn.net/HaPnm6P7TZhPQGGUxtDjAg-1200-80.jpg" style={{"width" : "100px"}}/>
           :
