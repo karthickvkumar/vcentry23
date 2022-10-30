@@ -4,8 +4,9 @@
 }
 
 .space{
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
 }
 
 .password-icon{
@@ -39,4 +40,15 @@
 .content{
   width: 80%;
   border: 3px solid blueviolet;
+}
+
+.register-lable{
+  width: 225px;
+  display: inline-block;
+  font-size: 22px;
+}
+
+.register-input{
+  font-size: 22px;
+  width: 300px;
 }

@@ -4,7 +4,9 @@ import {Outlet, NavLink} from "react-router-dom";
 const MailPage = () => {
   return(
     <div className="container">
-     <div className="header"></div>
+     <div className="header">
+      <NavLink to="/">back</NavLink>
+     </div>
      <div className="main-content">
       <div className="sidebar">
         <NavLink to="/mail/inbox">Inbox Page</NavLink>
