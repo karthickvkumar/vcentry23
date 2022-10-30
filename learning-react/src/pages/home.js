@@ -1,7 +1,13 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  
+  const moveToTrash = () => {
+    navigate("/mail/trash");
+  }
+
   return(
     <div>
       <h1>This is a Home Page</h1>
@@ -12,6 +18,8 @@ const HomePage = () => {
       <NavLink to="/mail/inbox">Go to Mail Box</NavLink>
       <br></br>
       <NavLink to="/register">Signup for free Registration</NavLink>
+      <br></br>
+      <button onClick={() => moveToTrash()}>Move to Trash</button>
     </div>
   )
 }

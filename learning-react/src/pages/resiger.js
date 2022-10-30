@@ -24,8 +24,9 @@ const RegisterPage = () => {
     qualification: false
   })
 
+  let [accountList, setAccountList] = useState([]);
+
   const submitRegister = () => {
-    console.log(registerForm);
     setFormError({
       userName : registerForm.userName === "" ? true : false,
       emailId : registerForm.emailId === "" ? true : false,
@@ -35,7 +36,12 @@ const RegisterPage = () => {
       hobbies : registerForm.hobbies.length === 0 ? true : false,
       address : registerForm.address === "" ? true : false,
       qualification : registerForm.qualification === "" ? true : false
-    })
+    });
+
+    accountList.push(registerForm);
+    setAccountList(accountList);
+
+    // setAccountList([...accountList, registerForm]);
   }
 
   const handleFormInput = (event) => {
@@ -113,6 +119,38 @@ const RegisterPage = () => {
       </div>
       <div className="space">
         <button onClick={() => submitRegister()}>Create your Account</button>
+      </div>
+      <div style={{"height": "600px"}}>
+        <table id="customers">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email ID</th>
+              <th>Date of Birth</th>
+              <th>Gender</th>
+              <th>Hobbies</th>
+              <th>Address</th>
+              <th>Qualification</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              accountList.map((value, index) => {
+                return(
+                  <tr key={index}>
+                    <td>{value.userName}</td>
+                    <td>{value.emailId}</td>
+                    <td>{value.dateOfBirth}</td>
+                    <td>{value.gender}</td>
+                    <td>{value.hobbies}</td>
+                    <td>{value.address}</td>
+                    <td>{value.qualification}</td>
+                  </tr>
+                )
+              })
+            }
+          </tbody>
+        </table>
       </div>
     </div>
   )
