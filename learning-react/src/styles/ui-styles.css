@@ -52,3 +52,12 @@
   font-size: 22px;
   width: 300px;
 }
+
+.error{
+  color: red;
+  font-size: 13px;
+}
+
+.input-error{
+  border: 2px solid red;
+}
