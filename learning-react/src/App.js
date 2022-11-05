@@ -9,8 +9,9 @@ import InboxPage from "./pages/inbox";
 import SentPage from "./pages/sent";
 import TrashPage from "./pages/trash";
 import RegisterPage from "./pages/resiger";
+import UserPage from "./pages/users";
 
-import "./styles/ui-styles.css"
+import "./styles/ui-styles.css";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="trash" element={<TrashPage></TrashPage>}></Route>
         </Route>
         <Route path="register" element={<RegisterPage></RegisterPage>}></Route>
+        <Route path="users" element={<UserPage></UserPage>}></Route>
       </Routes>
     </BrowserRouter>
   );
