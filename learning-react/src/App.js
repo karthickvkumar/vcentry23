@@ -10,6 +10,7 @@ import SentPage from "./pages/sent";
 import TrashPage from "./pages/trash";
 import RegisterPage from "./pages/resiger";
 import UserPage from "./pages/users";
+import AccountCreatePage from "./pages/account-create";
 
 import "./styles/ui-styles.css";
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="inbox" element={<InboxPage></InboxPage>}></Route>
           <Route path="sent" element={<SentPage></SentPage>}></Route>
           <Route path="trash" element={<TrashPage></TrashPage>}></Route>
+          <Route path="account" element={<AccountCreatePage></AccountCreatePage>}></Route>
         </Route>
         <Route path="register" element={<RegisterPage></RegisterPage>}></Route>
         <Route path="users" element={<UserPage></UserPage>}></Route>
