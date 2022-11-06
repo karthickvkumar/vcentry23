@@ -11,6 +11,7 @@ import TrashPage from "./pages/trash";
 import RegisterPage from "./pages/resiger";
 import UserPage from "./pages/users";
 import AccountCreatePage from "./pages/account-create";
+import UpdateUser from "./pages/update-user";
 
 import "./styles/ui-styles.css";
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="sent" element={<SentPage></SentPage>}></Route>
           <Route path="trash" element={<TrashPage></TrashPage>}></Route>
           <Route path="account" element={<AccountCreatePage></AccountCreatePage>}></Route>
+          <Route path="update" element={<UpdateUser></UpdateUser>}></Route>
         </Route>
         <Route path="register" element={<RegisterPage></RegisterPage>}></Route>
         <Route path="users" element={<UserPage></UserPage>}></Route>

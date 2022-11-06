@@ -16,6 +16,8 @@ const MailPage = () => {
         <NavLink to="/mail/trash">Trash Page</NavLink>
         <br></br>
         <NavLink to="/mail/account">Account Page</NavLink>
+        <br></br>
+        <NavLink to="/mail/update">Update User Page</NavLink>
       </div>
       <div className="content">
         <Outlet></Outlet>
