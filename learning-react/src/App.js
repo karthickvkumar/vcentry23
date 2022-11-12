@@ -12,6 +12,8 @@ import RegisterPage from "./pages/resiger";
 import UserPage from "./pages/users";
 import AccountCreatePage from "./pages/account-create";
 import UpdateUser from "./pages/update-user";
+import SettingsPage from "./pages/settings";
+import ParentPage from "./pages/parent";
 
 import "./styles/ui-styles.css";
 
@@ -31,6 +33,8 @@ function App() {
         </Route>
         <Route path="register" element={<RegisterPage></RegisterPage>}></Route>
         <Route path="users" element={<UserPage></UserPage>}></Route>
+        <Route path="settings" element={<SettingsPage></SettingsPage>}></Route>
+        <Route path="parent" element={<ParentPage></ParentPage>}></Route>
       </Routes>
     </BrowserRouter>
   );
