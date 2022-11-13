@@ -1,6 +1,10 @@
 import React, {useState} from "react";
+import { useDispatch } from "react-redux";
+import { sendUserData } from "../redux/actions/app-action";
 
 const RegisterPage = () => {
+
+  const dispatch = useDispatch();
 
   let [registerForm, setRegisterForm] = useState({
     userName : "",
@@ -40,7 +44,7 @@ const RegisterPage = () => {
 
     accountList.push(registerForm);
     setAccountList(accountList);
-
+    dispatch(registerForm);
     // setAccountList([...accountList, registerForm]);
   }
 
