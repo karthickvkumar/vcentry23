@@ -1,10 +1,12 @@
 import React, {useState} from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { sendUserData } from "../redux/actions/app-action";
 
 const RegisterPage = () => {
 
   const dispatch = useDispatch();
+  const userDataFromStore = useSelector((state) => state.AppReducer.userList );
+
 
   let [registerForm, setRegisterForm] = useState({
     userName : "",
@@ -44,7 +46,10 @@ const RegisterPage = () => {
 
     accountList.push(registerForm);
     setAccountList(accountList);
-    dispatch(registerForm);
+   
+    // let data = sendUserData(registerForm);
+    // dispatch(data);
+    dispatch(sendUserData(registerForm));
     // setAccountList([...accountList, registerForm]);
   }
 
@@ -139,7 +144,7 @@ const RegisterPage = () => {
           </thead>
           <tbody>
             {
-              accountList.map((value, index) => {
+              userDataFromStore.map((value, index) => {
                 return(
                   <tr key={index}>
                     <td>{value.userName}</td>
