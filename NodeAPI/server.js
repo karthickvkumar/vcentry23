@@ -61,6 +61,15 @@ app.get("/user", (request, response) => {
 
 //https://domainName.com/create
 // http://localhost:4000/create 
+/*
+{
+  "name" : "Kumar",
+  "age": 26,
+  "email": "k@gmail.com",
+  "location" : "Chennai",
+  "mobile": 47526555
+}
+*/
 app.post("/create", (request, response) => {
   const name = request.body.name;
   if(name == "" || name == undefined){
@@ -101,6 +110,16 @@ app.post("/create", (request, response) => {
 
 //https://domainName.com/edit/2
 // http://localhost:4000/edit/2
+
+/*
+{
+  "name" : "Kumar",
+  "age": 26,
+  "email": "k@gmail.com",
+  "location" : "Chennai",
+  "mobile": 47526555
+}
+*/
 app.put("/edit/:id", (request, response) => {
   const id = request.params.id;
 
