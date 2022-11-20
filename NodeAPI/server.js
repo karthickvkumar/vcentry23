@@ -19,8 +19,7 @@ Local host XHAMM
 host : "localhost",
 user: "root",
 password: "",
-database: "",
-port: 8080
+database: ""
 */
 const connection = mysql.createConnection({
   host : "remotemysql.com",
@@ -42,8 +41,8 @@ connection.connect((error) => {
 const tableName = "vcentry23";
 const serverError = "Sorry something went wrong in Server, pls contact Admin";
 
-//https:domainName.com/user
-// http:localhost:4000/user 
+//https://domainName.com/user
+// http://localhost:4000/user 
 app.get("/user", (request, response) => {
   const sqlQuery = `SELECT * FROM ${tableName}`;
 
@@ -60,8 +59,8 @@ app.get("/user", (request, response) => {
   })
 });
 
-//https:domainName.com/create
-// http:localhost:4000/create 
+//https://domainName.com/create
+// http://localhost:4000/create 
 app.post("/create", (request, response) => {
   const name = request.body.name;
   if(name == "" || name == undefined){
@@ -100,8 +99,57 @@ app.post("/create", (request, response) => {
   
 })
 
+//https://domainName.com/edit/2
+// http://localhost:4000/edit/2
+app.put("/edit/:id", (request, response) => {
+  const id = request.params.id;
 
+  const name = request.body.name;
+  const age = request.body.age;
+  const email = request.body.email;
+  const location = request.body.location;
+  const mobileNumber = request.body.mobile; 
 
+  const sqlQuery = `UPDATE ${tableName} SET name='${name}', age=${age}, email='${email}', location='${location}', mobile_number=${mobileNumber} WHERE id=${id}`;
+
+  connection.query(sqlQuery, (error, result) => {
+    if(error){
+      response.status(500).send({
+        actualError : error,
+        message : serverError
+      })
+    }
+    else{
+      response.status(200).send({
+        actualResult : result,
+        message : "Successfully user profile has been Modified"
+      });
+    }
+  })
+})
+
+//https://domainName.com/delete/2
+// http://localhost:4000/delete/2
+app.delete("/delete/:id", (request, response) => {
+  const id = request.params.id;
+
+  const sqlQuery = `DELETE FROM ${tableName} WHERE id=${id}`;
+
+  connection.query(sqlQuery, (error, result) => {
+    if(error){
+      response.status(500).send({
+        actualError : error,
+        message : serverError
+      })
+    }
+    else{
+      response.status(200).send({
+        actualResult : result,
+        message : "Successfully user profile has been Deleted"
+      });
+    }
+  })
+})
 
 const port = process.env.PORT || 4000;
 http.listen(port, () => {
