@@ -2,7 +2,13 @@ import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
+import { useSelector } from "react-redux";
+
 const CartPage = () => {
+
+  const product = useSelector((state) => state.ProductReducer.product);
+
+
   return(
     <div>
       <Header></Header>
@@ -41,7 +47,10 @@ const CartPage = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="cart_item">
+                                        {
+                                            product.map((value, index) => {
+                                                return(
+                                                    <tr class="cart_item">
                                             <td class="product-remove">
                                                 <a title="Remove this item" class="remove" href="#">×</a>
                                             </td>
@@ -49,15 +58,15 @@ const CartPage = () => {
                                             <td class="product-thumbnail">
                                                 <a href="single-product.html"><img width="145" height="145"
                                                         alt="poster_1_up" class="shop_thumbnail"
-                                                        src="img/product-thumb-2.jpg"/></a>
+                                                        src={value.image}/></a>
                                             </td>
 
                                             <td class="product-name">
-                                                <a href="single-product.html">Ship Your Idea</a>
+                                                <a href="single-product.html">{value.name}</a>
                                             </td>
 
                                             <td class="product-price">
-                                                <span class="amount">£15.00</span>
+                                                <span class="amount">{value.actual_price}</span>
                                             </td>
 
                                             <td class="product-quantity">
@@ -70,9 +79,13 @@ const CartPage = () => {
                                             </td>
 
                                             <td class="product-subtotal">
-                                                <span class="amount">£15.00</span>
+                                                <span class="amount">{value.actual_price}</span>
                                             </td>
                                         </tr>
+                                                )
+                                            })
+                                        }
+                                        
                                         <tr>
                                             <td class="actions" colspan="6">
                                                 <div class="coupon">

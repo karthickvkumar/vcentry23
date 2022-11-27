@@ -1,8 +1,31 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import axios from "axios";
+import {useLocation} from "react-router-dom";
 
 const SingleProductPage = () => {
+
+    const location = useLocation();
+    const state = location?.state;
+
+    const [product, setProduct] = useState({});
+
+    const loadProduct = () => {
+        const url = "https://shop143.herokuapp.com/telebuy/api/product/" + state.id;
+        axios.get(url)
+          .then((response) => {
+            setProduct(response.data);
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+      }
+
+      useEffect(() => {
+        loadProduct();
+      }, [])
+
   return(
     <div>
       <Header></Header>
@@ -31,14 +54,14 @@ const SingleProductPage = () => {
                         <div class="product-breadcroumb">
                             <a href="">Home</a>
                             <a href="">Category Name</a>
-                            <a href="">Sony Smart TV - 2015</a>
+                            <a href="">{product.name}</a>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="img/product-2.jpg" alt="" />
+                                        <img src={product.image} alt="" />
                                     </div>
 
                                     <div class="product-gallery">
@@ -51,9 +74,9 @@ const SingleProductPage = () => {
 
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">Sony Smart TV - 2015</h2>
+                                    <h2 class="product-name">{product.name}</h2>
                                     <div class="product-inner-price">
-                                        <ins>$700.00</ins> <del>$100.00</del>
+                                        <ins>{product.discount_price}</ins> <del>{product.actual_price}</del>
                                     </div>
 
                                     <form action="" class="cart">
