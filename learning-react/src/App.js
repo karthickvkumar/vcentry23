@@ -18,7 +18,11 @@ import ParentPage from "./pages/parent";
 
 import configureStore from "./redux/store/redux-store";
 
+import TravelixHome from "./pages/travelix-home";
+import CreateProfilePage from "./pages/create-profile";
+
 import "./styles/ui-styles.css";
+import "./App.css";
 
 const reduxStore = configureStore();
 
@@ -27,7 +31,9 @@ function App() {
     <Provider store={reduxStore}>
       <BrowserRouter>
         <Routes>
-          <Route path="" element={<HomePage></HomePage>}></Route>
+          <Route path="" element={<CreateProfilePage></CreateProfilePage>}></Route>
+          <Route path="travel" element={<TravelixHome></TravelixHome>}></Route>
+          <Route path="home" element={<HomePage></HomePage>}></Route>
           <Route path="contact" element={<ContactPage></ContactPage>}></Route>
           <Route path="about-us" element={<AboutPage></AboutPage>}></Route>
           <Route path="mail" element={<MailPage></MailPage>}>
